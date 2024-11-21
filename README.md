@@ -86,7 +86,7 @@ The project package.json file contains the required npm installed dependencies.
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
    
-   After installation, adding cargo to the PATH in ~/.bash_profile and then source the fileto apply.
+   After installation, adding cargo to the PATH in ~/.bash_profile and then source the file to apply.
    ```bash
    export PATH="$HOME/.cargo/bin:$PATH"
    source ~/.bash_profile
@@ -193,7 +193,7 @@ See the Dockerfile and entrypoint.sh files for more details.
    To run as a docker container use this command:
    ```bash
    docker run --rm -v "$(pwd)":/app namenottaken/zkp-environment:latest <lib_folder> <data_file>
-   // Example - note that main.js is assumed for the first passed parameter.
+   // Example - note that main.js is assumed as the first passed parameter.
    docker run --rm -v "$(pwd)":/app namenottaken/zkp-environment:latest unique_rows unique_rows/d100.csv
    ```
 
