@@ -7,7 +7,7 @@ The power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases.
 ZKP-Data-Quality leverages this powerful technology to provide a trustless proof for dataset quality.  
 As such, a prover can guarantee that at a given time, a given dataset meets certain qualitative criteria demanded by the verifier. They can do this without revealing the actual data whilst ensuring integrity and privacy.
 
-This approach streamlines existing collaborative approaches within organisations and also externally when dealing with third parties. Sharing datasets safely, reliably and quickly facilitates new opportunities, faster innovation cycles and greater business value.  
+This ability to prove constraints without revealing data can streamline existing collaborative approaches, both within organisations and also when dealing with external third parties. Sharing datasets safely, reliably and quickly facilitates new opportunities, faster innovation cycles and greater business value.  
 
 In addition, adherence to regulation could be more easily facilitated. For example, datasets used in medical trials or financial reporting could be verified as meeting specific criteria thresholds at the time of use.
 
