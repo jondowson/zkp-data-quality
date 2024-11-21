@@ -6,6 +6,8 @@ The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling 
 For example, if multiple parties wish to collaborate and proove that a given timestamped dataset meets certain qualitative criteria.
 This project verifies qualitative aspects of data sets without revealing the actual data and so ensures data integrity and privacy.
 
+This approach will allow for more streamlined and reliable working practices both within organisations and externally. Sharing datasets safely and reliably can lead to new opportunities and greater business value. Also adherence to regulation could be more easily facilitated, for example, if datasets used in medical trials or financial reporting could be verified as meeting criteria thresholds at the time of use.
+
 ## Project Overview
 
 The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent both the original and sorted datasets. 
