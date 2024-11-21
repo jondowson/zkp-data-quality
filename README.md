@@ -14,7 +14,7 @@ In addition, adherence to regulation could be more easily facilitated. For examp
 
 ## Project Overview
 
-The ZKP-Data-Quality collection of proofs follow the same pattern.
+The ZKP-Data-Quality collection of proofs follow this pattern.
 
 ### 1. Proof of Provenance.
 The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent both the original and sorted datasets. 
