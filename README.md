@@ -15,10 +15,13 @@ Moreover, regulatory compliance becomes significantly more streamlined. For inst
 The ZKP-Data-Quality suite of proofs is designed to achieve two critical objectives:
 
 ### 1. Proof of Provenance  
-How can we ensure that any claims made about a dataset are genuinely tied to that specific dataset?
+
+How can we ensure that any claims made about a dataset are genuinely tied to that specific dataset?  
+
 This is achieved by embedding the root hash of all dataset hash values directly into the proof. For enhanced efficiency within the ZKP circuit, the proof also includes the root hash of the dataset's sorted hashes. By incorporating both the sorted and unsorted root hashes, the proof can be traced back to the original dataset, ensuring complete traceability. This approach eliminates the risk of data quality claims being misattributed to an incorrect dataset.
 
 ### 2. Proof of Quality Aspects   
+
 Once the dataset's provenance is established, qualitative attributes can be validated without exposing the underlying data. For instance, proofs can be generated to demonstrate aspects like row uniqueness or row completeness, even for dynamic, 'live' datasets. These proofs can also be timestamped to provide a verifiable snapshot of data quality at a specific moment in time.  
 
 Note: Refer to the [ISO](#iso-standards) section for additional context on data quality standards.
