@@ -2,12 +2,14 @@
 
 # Zero-Knowledge-Proof-Data-Quality
 
-The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases and this project concentrates on the issue of data quality when multiple parties wish to collaborate or proove that a dataset they have or once used meets certain qualitative criteria.
-This project verifies qualitative aspects of data sets without revealing the actual data and so ensuring data integrity and privacy.
+The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases and this project concentrates on the issue of data quality.  
+For example, if multiple parties wish to collaborate and proove that a given timestamped dataset meets certain qualitative criteria.
+This project verifies qualitative aspects of data sets without revealing the actual data and so ensures data integrity and privacy.
 
 ## Project Overview
 
-The first objective is to process a dataset, compute cryptographic hashes for each entry, and construct Merkle Trees to represent both the original and sorted datasets (sorted for efficiency). This proof of provenance ensures the dataset in question cannot be subsequently confused with a different one.
+The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent both the original and sorted datasets. 
+The original dataset is sorted outside of the proof for more efficient circuit computation. However, a proof of provenance is created to ensure that both the sorted and unsorted versions of the dataset can be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
 
 The second objective is to generate and verify ZKPs to confirm a given quality aspect, all without exposing the underlying data.  
 There are various data quality aspects such as row-uniqueness or row-completeness that zero-knowledge proofs can then be generated for and these aspects can be seen as subfolders under the lib/ folder.  
