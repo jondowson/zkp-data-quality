@@ -154,7 +154,7 @@ See the Dockerfile and entrypoint.sh files for more details.
    In addition retrieve the powers-of-tau files used in the zksnark setup ceremony.
 
    ```bash
-   git clone https://github.com/jondowson/zkp.git
+   git clone https://github.com/jondowson/zkp-data-quality.git
    cd zkp-data-quality
    mkdir ptau
    wget -P ptau/ https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_16.ptau
