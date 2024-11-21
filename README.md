@@ -12,20 +12,16 @@ Moreover, regulatory compliance becomes significantly more streamlined. For inst
 
 ## Project Overview
 
-The ZKP-Data-Quality collection of proofs meet these two objectives.
+The ZKP-Data-Quality suite of proofs is designed to achieve two critical objectives:
 
-### 1. Proof of Provenance.  
+### 1. Proof of Provenance  
+How can we ensure that any claims made about a dataset are genuinely tied to that specific dataset?
+This is achieved by embedding the root hash of all dataset hash values directly into the proof. For enhanced efficiency within the ZKP circuit, the proof also includes the root hash of the dataset's sorted hashes. By incorporating both the sorted and unsorted root hashes, the proof can be traced back to the original dataset, ensuring complete traceability. This approach eliminates the risk of data quality claims being misattributed to an incorrect dataset.
 
-How do we ensure that claims made against a dataset are indeed for that particular dataset?  
-We achieve this by baking into the proof the root hash of all the hash values of the dataset. 
-In addition, the sorted version of the dataset hashes, calculated for greater zkp circuit efficiency, is also added to the proof. 
-As such, both the sorted and unsorted root hashes can subsequently be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
+### 2. Proof of Quality Aspects   
+Once the dataset's provenance is established, qualitative attributes can be validated without exposing the underlying data. For instance, proofs can be generated to demonstrate aspects like row uniqueness or row completeness, even for dynamic, 'live' datasets. These proofs can also be timestamped to provide a verifiable snapshot of data quality at a specific moment in time.  
 
-### 2. Proof of Quality Aspect.
-
-Now the provenance of the dataset has been established, a qualitative aspect can be proved without the need to expose the data.
-Aspects such as row-uniqueness and row-completeness can have proofs generated and these can be timestamped for 'live' datasets.  
-Note - see the section [ISO](#iso-standards) about data quality standards.
+Note: Refer to the [ISO](#iso-standards) section for additional context on data quality standards.
 
 ## Features
 
