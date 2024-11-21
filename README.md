@@ -46,8 +46,8 @@ To run the project natively without Docker, follow these steps to install the ne
 - Rust and Cargo 
 - Circom
 
-The project package.json file contains the npm installed dependencies.
-
+The project package.json file contains the required npm installed dependencies.
+```json
   "dependencies": {
     "circomlib": "^2.0.5",
     "circomlibjs": "^0.1.7",
@@ -56,6 +56,7 @@ The project package.json file contains the npm installed dependencies.
     "csv-parser": "^3.0.0",
     "snarkjs": "^0.7.4"
   }
+```
 
 1. **Install Node.js and npm:**
    
