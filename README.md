@@ -2,11 +2,12 @@
 
 # Zero-Knowledge-Proof-Data-Quality
 
-The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases and this project concentrates on the issue of data quality.  
-For example, if multiple parties wish to collaborate and proove that a given timestamped dataset meets certain qualitative criteria.
-This project verifies qualitative aspects of data sets without revealing the actual data and so ensures data integrity and privacy.
+The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases.
+ZKP-Data-Quality provides an approach for a trustless proof of dataset-quality.  
+As such, multiple parties wishing to collaborate may proove that a given dataset meets certain qualitative criteria (at a given time).
+This project verifies qualitative aspects of datasets without revealing the actual data and so ensures integrity and privacy.
 
-This approach will allow for more streamlined and reliable working practices both within organisations and externally. Sharing datasets safely and reliably can lead to new opportunities and greater business value. Also adherence to regulation could be more easily facilitated, for example, if datasets used in medical trials or financial reporting could be verified as meeting criteria thresholds at the time of use.
+This approach could allow for more streamlined and reliable working practices both within organisations and externally. Sharing datasets safely and reliably can lead to new opportunities and greater business value. Also adherence to regulation could be more easily facilitated, for example, if datasets used in medical trials or financial reporting could be verified as meeting criteria thresholds at the time of use.
 
 ## Project Overview
 
