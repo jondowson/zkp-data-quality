@@ -4,6 +4,7 @@
 
 The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases.  
 ZKP-Data-Quality provides an approach for a trustless proof of dataset-quality.  
+
 As such, multiple parties wishing to collaborate may proove that a given dataset meets certain qualitative criteria (at a given time).
 This project verifies qualitative aspects of datasets without revealing the actual data and so ensures integrity and privacy.
 
