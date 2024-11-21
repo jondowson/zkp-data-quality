@@ -14,9 +14,13 @@ In addition, adherence to regulation could be more easily facilitated. For examp
 
 ## Project Overview
 
+The ZKP-Data-Quality collection of proofs follow the same pattern.
+
+### 1. Proof of Provenance.
 The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent both the original and sorted datasets. 
 The original dataset is sorted outside of the proof for more efficient circuit computation. However, a proof of provenance is created to ensure that both the sorted and unsorted versions of the dataset can be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
 
+### 2. Proof of Quality Aspect.
 The second objective is to generate and verify ZKPs to confirm a given quality aspect, all without exposing the underlying data. There are various data quality aspects such as row-uniqueness or row-completeness that proofs can be generated for and these aspects can be seen as subfolders under the lib/ folder.  
 
 ## Features
