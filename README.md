@@ -21,7 +21,7 @@ The hashes are sorted outside of the proof for more efficient circuit computatio
 
 ### 2. Proof of Quality Aspect.
 The second objective is to generate and verify ZKPs to confirm a given quality aspect, all without exposing the underlying data. There are various data quality aspects such as row-uniqueness or row-completeness that proofs can be generated for and these aspects can be seen as subfolders under the lib/ folder.  
-Note - see the section on ISO data quality for informationabout data quality standards.
+Note - see the section on [ISO](##ISO Standards) data quality for informationabout data quality standards.
 
 ## Features
 
@@ -240,7 +240,7 @@ lib
 - `generated/`: Stores generated files such as Circom circuits, SnarkJS outputs, and scripts. Cleared after every run.
 - `config.js`: Configuration file specifying directory paths and other settings.
 
-## ISO standards  
+## ISO Standards  
 
 ISO Standards Focused on Data Quality.
 
