@@ -15,13 +15,18 @@ In addition, adherence to regulation could be more easily facilitated. For examp
 
 The ZKP-Data-Quality collection of proofs meet these two objectives.
 
-### 1. Proof of Provenance.
-The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent these hashes and a sorted version of the hashes. 
-The hashes are sorted outside of the proof for more efficient circuit computation. However, a proof of provenance is created to ensure that both the sorted and unsorted versions can be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
+### 1. Proof of Provenance.  
+
+How do we ensure that claims made against a dataset are indeed for that particular dataset?  
+We achieve this by baking into the proof the root hash of all the hash values of the dataset. 
+In addition, the sorted version of the dataset hashes, calculated for greater zkp circuit efficiency, is also added to the proof. 
+As such, both the sorted and unsorted root hashes can subsequently be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
 
 ### 2. Proof of Quality Aspect.
-The second objective is to generate and verify ZKPs to confirm a given quality aspect, all without exposing the underlying data. There are various data quality aspects such as row-uniqueness or row-completeness that proofs can be generated for and these aspects can be seen as subfolders under the lib/ folder.  
-Note - see the section on [ISO](#iso-standards) data quality for informationabout data quality standards.
+
+Now the provenance of the dataset has been established, a qualitative aspect can be proved without the need to expose the data.
+Aspects such as row-uniqueness and row-completeness can have proofs generated and these can be timestamped for 'live' datasets.  
+Note - see the section [ISO](#iso-standards) about data quality standards.
 
 ## Features
 
