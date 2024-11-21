@@ -1,6 +1,6 @@
 <p align="center"><img src="./ZKP_logo.png" alt="ZKP Logo" width="200" height="auto"></p>
 
-# Zero-Knowledge-Proof-Data-Quality
+# ZKP-Data-Quality
 
 The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases.  
 ZKP-Data-Quality provides an approach for a trustless proof of dataset-quality ensuring integrity and privacy.  
