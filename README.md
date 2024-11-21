@@ -141,7 +141,7 @@ See the Dockerfile and entrypoint.sh files for more details.
    To build the Dockerfile locally and list it:
 
    ```bash
-   cd zkp
+   cd zkp-data-quality
    docker build -t namenottaken/zkp-environment:latest .
    docker images
    ```
@@ -151,7 +151,7 @@ See the Dockerfile and entrypoint.sh files for more details.
 1. **Clone the project repo:**
 
    For both native and docker usage, clone this project and enter the folder.  
-   In addition retrieve the powers of tau files used in the zksnark setup ceremony.
+   In addition retrieve the powers-of-tau files used in the zksnark setup ceremony.
 
    ```bash
    git clone https://github.com/jondowson/zkp.git
