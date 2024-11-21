@@ -13,14 +13,15 @@ In addition, adherence to regulation could be more easily facilitated. For examp
 
 ## Project Overview
 
-The ZKP-Data-Quality collection of proofs follow this pattern.
+The ZKP-Data-Quality collection of proofs meet these two objectives.
 
 ### 1. Proof of Provenance.
-The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent both the original and sorted datasets. 
-The original dataset is sorted outside of the proof for more efficient circuit computation. However, a proof of provenance is created to ensure that both the sorted and unsorted versions of the dataset can be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
+The first objective is to process a dataset by computing cryptographic hashes for each row and then construct Merkle Trees to represent these hashes and a sorted version of the hashes. 
+The hashes are sorted outside of the proof for more efficient circuit computation. However, a proof of provenance is created to ensure that both the sorted and unsorted versions can be traced back to the original dataset. This avoids any chance of data quality claims being attributed to the wrong dataset.
 
 ### 2. Proof of Quality Aspect.
 The second objective is to generate and verify ZKPs to confirm a given quality aspect, all without exposing the underlying data. There are various data quality aspects such as row-uniqueness or row-completeness that proofs can be generated for and these aspects can be seen as subfolders under the lib/ folder.  
+Note - see the section on ISO data quality for informationabout data quality standards.
 
 ## Features
 
@@ -238,6 +239,57 @@ lib
 - `lib/unique_rows/functions/`: Includes utility functions for Merkle Tree construction and dynamically writing the circom circuits.
 - `generated/`: Stores generated files such as Circom circuits, SnarkJS outputs, and scripts. Cleared after every run.
 - `config.js`: Configuration file specifying directory paths and other settings.
+
+## ISO standards
+
+ISO Standards Focused on Data Quality.
+
+1. **ISO 8000: Data Quality**
+Focus: This series of standards provides guidelines and requirements for data quality management, particularly for master data.
+Key parts:
+ISO 8000-1: Overview of data quality.
+ISO 8000-2: Vocabulary.
+ISO 8000-110: Syntax, semantic encoding, and master data exchange.
+ISO 8000-61X series: Quality measurement methodologies.
+
+2. **ISO/IEC 25012: Data Quality Model**
+Focus: Defines data quality characteristics and associated attributes for data used in computer systems.  
+Key data quality characteristics:  
+Inherent Data Quality:  
+- Accuracy  
+- Consistency  
+- Credibility  
+- Currentness  
+- System-Dependent Data Quality:
+- Accessibility
+- Compliance
+- Confidentiality
+- Efficiency
+
+3. **ISO/IEC 25024: Measurement of Data Quality**
+Focus: Provides a methodology to measure the data quality characteristics defined in ISO/IEC 25012.  
+
+4. **ISO 27001: Information Security Management**
+Relevance: While primarily about information security, it includes data quality as part of the broader context of managing data integrity and availability.  
+
+5. **ISO 9001: Quality Management Systems**
+Relevance: This general quality management standard includes principles that can be applied to ensure data quality within the broader quality management system.  
+
+6. **ISO/IEC 38500: IT Governance**
+Relevance: Addresses data quality in the context of IT governance by emphasizing accountability and proper use of IT systems, which impacts data quality.  
+
+7. **ISO 15489: Records Management**
+Focus: Ensures the quality of data and records management, especially in terms of completeness, authenticity, and reliability.  
+Additional Standards Related to Specific Contexts  
+ISO 21597: Information container for linked document delivery: Focuses on data sharing and quality for the built environment.  
+ISO 30300 Series: Ensures metadata and record management systems adhere to quality standards.  
+Choosing the Right Standard  
+Select the standard(s) most applicable to your organization's needs:  
+
+For general data quality management: ISO 8000.  
+For measuring and modeling data quality: ISO/IEC 25012 and ISO/IEC 25024.  
+For integration with IT governance: ISO/IEC 38500.  
+For compliance and management systems: ISO 9001 or ISO 27001.  
 
 ## Contributing
 
