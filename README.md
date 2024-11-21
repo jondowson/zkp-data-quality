@@ -9,7 +9,7 @@ As such, a prover can guarantee that at a given time, a given dataset meets cert
 
 This ability to prove constraints without revealing data can streamline existing collaborative approaches, both within organisations and also when dealing with external third parties. Sharing datasets safely, reliably and quickly facilitates new opportunities, faster innovation cycles and greater business value.  
 
-In addition, adherence to regulation could be more easily facilitated. For example, datasets used in medical trials or financial reporting could be verified as meeting specific criteria thresholds at the time of use.
+In addition, adherence to regulation can be more easily facilitated. For example, datasets used in medical trials or financial reporting could be verified as meeting specific criteria thresholds at the time of use.
 
 ## Project Overview
 
