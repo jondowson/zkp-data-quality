@@ -22,31 +22,54 @@ You can set up the project natively or more easily using docker.
 ### 1. Native Installation
 To run the project natively without Docker, follow these steps to install the necessary software dependencies:
 
-- Node.js
-- npm
-- Rust ad Cargo 
-- circomlibjs
-- crypto-browserifys
-- csv-parser
-- snarkjs
+- Node.js + npm
+- Rust and Cargo 
+- Circom
+
+The project package.json file contains the npm installed dependencies.
+
+  "dependencies": {
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.1",
+    "csv-parser": "^3.0.0",
+    "snarkjs": "^0.7.4"
+  }
 
 1. **Install Node.js and npm:**
    
-   Ensure that Node.js (version 14 or higher) and npm are installed on your system. You can download them from the [official Node.js website](https://nodejs.org/).
+   Ensure that Node.js (version 20 or higher) and npm are installed on your system.  
+   You can download them from the [official Node.js website](https://nodejs.org/).
    
    To verify the installation, run:
    ```bash
    node -v
    npm -v
    ```
-   These commands should display the installed versions of Node.js and npm, respectively.
 
-2. **Install Rust and Cargo:**
-   The project requires Rust and its package manager, Cargo. Install them using rustup:
+1. **Install Python 3 and Pip:**
+
+   Some scripts may require Python 3. Install Python 3 and its package manager, pip, from the official Python website.
+
+   Verify the installation:
+   ```bash
+   python3 --version
+   pip3 --version
+   ```
+
+1. **Install Rust and Cargo:**
+
+   The project requires Rust and its package manager, Cargo. Install them using rustup.
    ```bash
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
-   Follow the on-screen instructions to complete the installation. After installation, ensure that the Cargo bin directory is in your system's PATH.
+   
+   After installation, adding cargo to the PATH in ~/.bash_profile and then source the fileto apply.
+   ```bash
+   export PATH="$HOME/.cargo/bin:$PATH"
+   source ~/.bash_profile
+   ```
 
    Verify the installation by running:
    ```bash
@@ -54,7 +77,8 @@ To run the project natively without Docker, follow these steps to install the ne
    cargo --version
    ```
 
-3. **Install Circom:**
+1. **Install Circom:**
+
    Circom is a circuit compiler for zkSNARKs. Clone the Circom repository and build it:
    ```bash
    git clone https://github.com/iden3/circom.git
@@ -62,12 +86,14 @@ To run the project natively without Docker, follow these steps to install the ne
    cargo build --release
    cargo install --path circom
    ```
+
    After installation, verify by running:
    ```bash
    circom --version
    ```
 
-4. **Install SnarkJS:**
+1. **Install SnarkJS:**
+
    SnarkJS is a JavaScript library for zkSNARKs. Install it globally using npm:
    ```bash
    npm install -g snarkjs
@@ -77,36 +103,23 @@ To run the project natively without Docker, follow these steps to install the ne
    snarkjs --version
    ```
 
-5. **Install Additional Node.js Packages:**
-   Navigate to the project directory and install the required Node.js packages:
+1. **Install Additional Node.js Packages:**
+
+   Navigate to the project directory and install the required Node.js packages listed in package.json.
    ```bash
-   cd path/to/zkp-project
+   cd zkp-data-quality
    npm install
    ```
    This command installs the dependencies specified in the package.json file.
-
-6. **Install Python 3 and Pip:**
-   Some scripts may require Python 3. Install Python 3 and its package manager, pip, from the official Python website.
-
-   Verify the installation:
-   ```bash
-   python3 --version
-   pip3 --version
-   ```
-
-7. **Install Python Packages:**
-   If the project includes a requirements.txt file, install the necessary Python packages:
-   ```bash
-   pip3 install -r requirements.txt
-   ```
 
 By completing these steps, you will have all the necessary software dependencies installed to run the project natively on your system.
 
 
 ### 2. Installation Using Docker
 
-To streamline the setup process, you can utilize Docker to run the project without installing Node.js or npm locally. See the Dockerfile and entrypoint.sh files for more details.  
-Note that for the Docker installation the container mounts the host machines file system to access the project itself.
+To streamline the setup process, you can utilize Docker to run the project without installing Node.js or npm locally.  
+See the Dockerfile and entrypoint.sh files for more details.  
+Note - for the Docker installation the container mounts the host machine to access the project code.
 
 1. **Install Docker:**
 
