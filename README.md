@@ -155,7 +155,7 @@ See the Dockerfile and entrypoint.sh files for more details.
 
    ```bash
    git clone https://github.com/jondowson/zkp.git
-   cd zkp
+   cd zkp-data-quality
    mkdir ptau
    wget -P ptau/ https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_16.ptau
    wget -P ptau/ https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_22.ptau
