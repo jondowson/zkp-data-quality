@@ -1,12 +1,16 @@
 <p align="center"><img src="./ZKP_logo.png" alt="ZKP Logo" width="200" height="auto"></p>
 
-# Zero-Knowledge-Proof Data Quality
+# Zero-Knowledge-Proof-Data-Quality
 
-This project demonstrates the implementation of Zero-Knowledge Proofs (ZKPs) to verify qualitative aspects of data sets. For example, the uniqueness and sorted order of data entries without revealing the actual data. By leveraging cryptographic techniques, we ensure data integrity and privacy.
+The largely untapped power of Zero-Knowledge Proofs (ZKPs) have many compelling use cases and this project concentrates on the issue of data quality when multiple parties wish to collaborate or proove that a dataset they have or once used meets certain qualitative criteria.
+This project verifies qualitative aspects of data sets without revealing the actual data and so ensuring data integrity and privacy.
 
 ## Project Overview
 
-The primary objective is to process a dataset, compute cryptographic hashes for each entry, and construct Merkle Trees to represent both the original and sorted datasets. We then generate and verify ZKPs to confirm that the data entries are unique and correctly sorted, all without exposing the underlying data. This approach also ensures data provenance as the root hash of the original dataset as well as the root hash of its sorted entries are themselves part of the proof.
+The first objective is to process a dataset, compute cryptographic hashes for each entry, and construct Merkle Trees to represent both the original and sorted datasets (sorted for efficiency). This proof of provenance ensures the dataset in question cannot be subsequently confused with a different one.
+
+The second objective is to generate and verify ZKPs to confirm a given quality aspect, all without exposing the underlying data.  
+There are various data quality aspects such as row-uniqueness or row-completeness that zero-knowledge proofs can then be generated for and these aspects can be seen as subfolders under the lib/ folder.  
 
 ## Features
 
