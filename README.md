@@ -117,9 +117,9 @@ By completing these steps, you will have all the necessary software dependencies
 
 ### 2. Installation Using Docker
 
-To streamline the setup process, you can utilize Docker to run the project without installing Node.js or npm locally.  
+To streamline the setup process, you can utilize Docker to run the project without installing Node.js or npm locally. 
+The Docker container has all the software dependencies and mounts the host machine to access the project code. 
 See the Dockerfile and entrypoint.sh files for more details.  
-Note - for the Docker installation the container mounts the host machine to access the project code.
 
 1. **Install Docker:**
 
@@ -133,18 +133,20 @@ Note - for the Docker installation the container mounts the host machine to acce
    docker pull namenottaken/zkp-environment:latest
    ```
 
-   To build the Dockerfile locally:
+   To build the Dockerfile locally and list it:
 
    ```bash
    cd zkp
    docker build -t namenottaken/zkp-environment:latest .
+   docker images
    ```
 
 ## Usage
 
 1. **Clone the project repo:**
 
-   For both native and docker usage, retrieve this project and enter the folder. In addition retrieve the powers of tau files used in the zksnark setup ceremony.
+   For both native and docker usage, clone this project and enter the folder.  
+   In addition retrieve the powers of tau files used in the zksnark setup ceremony.
 
    ```bash
    git clone https://github.com/jondowson/zkp.git
@@ -154,19 +156,23 @@ Note - for the Docker installation the container mounts the host machine to acce
    wget -P ptau/ https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_22.ptau
    ```
 
-2. **Run the application:**
+1. **Run the application:**
+
    Each subfolder of the lib folder creates a proof for a certain dataset attribute, e.g. uniqueness of rows.  
-   See the lib folder for a list of proofs.
+   See the lib folder to see all available proofs.
+
+   To run natively use this command:
 
    ```bash
-   // To run natively use this command.
    node lib/<lib_folder>/main.js <lib_folder>/your_dataset.csv
    // Example:
    node lib/unique_rows/main.js unique_rows/d100.csv
-
-   // To run with the docker container use this command.
+   ```
+   
+   To run as a docker container use this command:
+   ```bash
    docker run --rm -v "$(pwd)":/app namenottaken/zkp-environment:latest <lib_folder> <data_file>
-   // Example - note that main.js is assumed:
+   // Example - note that main.js is assumed for the first passed parameter.
    docker run --rm -v "$(pwd)":/app namenottaken/zkp-environment:latest unique_rows unique_rows/d100.csv
    ```
 
@@ -175,7 +181,7 @@ Note - for the Docker installation the container mounts the host machine to acce
 This tree shows the general structure of the project.
 
 ```
-zkp-project/
+zkp-data-quality/
 data
 ├── complete
 │   ├── c10.csv
